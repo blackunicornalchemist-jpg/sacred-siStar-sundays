@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sacred SiStar Sundays – Founding Circle</title>
+<style>
+    body {
+        font-family: "Georgia", serif;
+        background: #f7f4ef;
+        color: #2b1b1b;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        color: #4a2c3d;
+        font-size: 32px;
+    }
+
+    p {
+        font-family: "Arial", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .section {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .cta {
+        text-align: center;
+    }
+
+    button {
+        background: #4a2c3d;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #3b2230;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    #confirmation {
+        display: none;
+        margin-top: 16px;
+        padding: 12px;
+        background: #eef6ef;
+        border-radius: 8px;
+        color: #2b6b3f;
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Sacred SiStar Sundays</h1>
+    <p>Founding Virtual Circle — Intentional Sisterhood for Women of Color and Diaspora Women</p>
+    <p><strong>March 1 • 11:11 AM PST / 2:11 PM EST</strong></p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>What This Is</h2>
+        <p>
+            Sacred SiStar Sundays is a sister circle for intentional community, reflection, and embodied growth.
+            It is centered for women of color and diaspora women who desire sisterhood and spiritual connection.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What This Is Not</h2>
+        <p>
+            This is not therapy, professional consulting, or political debate.
+            It is a community space for growth and sisterhood.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Founding Circle Details</h2>
+        <p>
+            Virtual gathering via Zoom.<br>
+            11:11 AM PST / 2:11 PM EST.<br>
+            Gentle, intentional structure.<br>
+            Neurodivergent-friendly participation.
+        </p>
+    </div>
+
+    <div class="section cta">
+        <h2>RSVP to Join</h2>
+
+        <form id="rsvpForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">RSVP Now</button>
+        </form>
+
+        <div id="confirmation">
+            Thank you for RSVPing. Your seat is confirmed.
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.getElementById('rsvpForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
+
+    document.getElementById('confirmation').style.display = 'block';
+
+    window.location.href = `mailto:${email}?subject=Sacred%20SiStar%20Sundays%20RSVP%20Confirmed&body=Hello%20${encodeURIComponent(name)},%0D%0A%0D%0AYour%20RSVP%20for%20Sacred%20SiStar%20Sundays%20has%20been%20received.%0D%0A%0D%0AMarch%201%20at%2011:11%20AM%20PST%20/%202:11%20PM%20EST.%0D%0A`;
+});
+</script>
+
+</body>
+</html>
